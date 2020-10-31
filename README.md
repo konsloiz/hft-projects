@@ -1,2 +1,2 @@
-# System Design
-This repository will include all software projects deployed for the course Business Process Technology, M.Sc. program Software Technology by HFT Stuttgart.
+# Software Projects
+This repository includes all the software projects deployed for the M.Sc. program Software Technology by HFT Stuttgart.
