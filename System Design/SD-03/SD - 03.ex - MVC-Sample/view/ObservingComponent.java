@@ -11,5 +11,6 @@ public class ObservingComponent implements PropertyChangeListener {
 		 System.out.println("\tproperty: "+ evt.getPropertyName()); 
 		 System.out.println("\told: "+ evt.getOldValue()); 
 		 System.out.println("\tnew: "+ evt.getNewValue()); 
+		 System.out.println("\tid: "+ evt.getPropagationId());
 	 } 
 }
