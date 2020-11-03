@@ -1,13 +1,16 @@
 package view;
 
 import java.awt.Dimension;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.Date;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 @SuppressWarnings("serial")
-public class View extends JFrame {
+public class View extends JFrame implements PropertyChangeListener {
 	
 	private JTextArea output = new JTextArea();
 	
@@ -18,6 +21,12 @@ public class View extends JFrame {
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLocationByPlatform(true);
 		this.pack();
-		this.setVisible(true);
+		this.setVisible(true); 
+	}
+
+	@Override
+	public void propertyChange(PropertyChangeEvent evt) {
+		output.append(new Date() + ": " + evt.getNewValue() + "\n");
+		
 	}
 }
