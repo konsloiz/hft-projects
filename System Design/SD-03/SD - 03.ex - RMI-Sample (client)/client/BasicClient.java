@@ -6,6 +6,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
+import common.Message;
 import common.ResponseService;
 
 import static common.Constants.*;
@@ -30,7 +31,7 @@ public class BasicClient {
 
 	public String getRespone() {
 		try {
-			return service.request();
+			return service.request(new Message ("text", "Hello World"));
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
