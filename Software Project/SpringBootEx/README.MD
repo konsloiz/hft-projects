@@ -1,9 +1,9 @@
-##Exploration: Spring Boot and Swagger
+## Exploration: Spring Boot and Swagger
 > This project was implemented for the
 alphaQuest Project - Work Item:
 [22](https://dev.azure.com/alphaquest/2020%20-%20Nurse%20Rostering/_boards/board/t/2020%20-%20Nurse%20Rostering%20Team/Issues/?workitem=22)
 
-####Task Description
+#### Task Description
 Set up a Java Spring Boot application with Swagger
 
 Note: As you go, please create a global glossary on the Wiki.
@@ -25,7 +25,7 @@ Also, please document your findings as a team in the Wiki as a tutorial.
     * Add unit tests using JUnit and AsserThat (assertj)
 
 ----
-####Instructions
+#### Instructions
 1. Run the SpringBootExApplication.class
 2. Connect to: http:/localhost:8080/
 3. To view Swagger UI visit: http://localhost:8080/swagger-ui.html
@@ -43,3 +43,6 @@ Also, please document your findings as a team in the Wiki as a tutorial.
 7. To list all entries belonging to a user visit: http://localhost:8080/listUserEntries/user_name
    - user_name: Add the user name you want 
 
+----
+#### Tests
+Pending
