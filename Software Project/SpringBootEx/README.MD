@@ -45,4 +45,4 @@ Also, please document your findings as a team in the Wiki as a tutorial.
 
 ----
 #### Tests
-Pending
+All tests are passing
