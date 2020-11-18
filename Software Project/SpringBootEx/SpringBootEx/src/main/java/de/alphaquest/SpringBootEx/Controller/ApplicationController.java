@@ -24,15 +24,14 @@ public class ApplicationController {
 	ArrayList<TimeEntry> entries = new ArrayList<TimeEntry>();
 	private Logger logger = LoggerFactory.getLogger(ApplicationController.class);
 
-	
 	@RequestMapping("/")
 	public String home() {
 		return "Hello world! This is a Spring Boot application made for alphaQuest project";
-		
+
 	}
 
 	@GetMapping("/addEntry/{user_name}/{stringDate}/{intDuration}/{project_name}/{task_description}")
-	public String addEntry(@PathVariable String user_name, @PathVariable String stringDate,
+	public TimeEntry addEntry(@PathVariable String user_name, @PathVariable String stringDate,
 			@PathVariable Integer intDuration, @PathVariable String project_name,
 			@PathVariable String task_description) {
 
@@ -44,38 +43,39 @@ public class ApplicationController {
 				user_name, date, duration, project_name, task_description);
 		TimeEntry entry = new TimeEntry(user_name, date, duration, project_name, task_description);
 		entries.add(entry);
-		return entry.toString() + " added successfully";
+		return entry;
 
 	}
 
 	@GetMapping("/listAll")
-	public String listAll() {
-		return entries.toString();
+	public ArrayList<TimeEntry> listAll() {
+		return entries;
 	}
 
 	@GetMapping("/deleteEntry/{projectToDelete}")
-	public String deleteEntry(@PathVariable String projectToDelete) {
+	public ArrayList<TimeEntry> deleteEntry(@PathVariable String projectToDelete) {
 
 		logger.debug("trying to delete Project {}", projectToDelete);
 		logger.info("list prior to deletion: {}", listAll());
 		entries.removeIf(e -> e.getProject_name().equals(projectToDelete));
 		logger.debug("list after deletion: {}", listAll());
-		return "Entry with Project Name: " + projectToDelete + ": removed";
+		return entries;
 
 	}
 
 	@GetMapping("/listUsers")
-	public String listUsers() {
+	public List<String> listUsers() {
 
 		List<String> users = entries.stream().map(u -> u.getUser_name()).collect(Collectors.toList());
-		return users.toString();
+		return users;
 	}
 
 	@GetMapping("/listUserEntries/{user_name}")
-	public String listUserEntries(@PathVariable String user_name) {
+	public List<TimeEntry> listUserEntries(@PathVariable String user_name) {
 
-		List<TimeEntry> user_entries = entries.stream().filter(u -> user_name.equals(u.getUser_name())).collect(Collectors.toList());
-		return user_entries.toString();
+		List<TimeEntry> user_entries = entries.stream().filter(u -> user_name.equals(u.getUser_name()))
+				.collect(Collectors.toList());
+		return user_entries;
 	}
 
 }

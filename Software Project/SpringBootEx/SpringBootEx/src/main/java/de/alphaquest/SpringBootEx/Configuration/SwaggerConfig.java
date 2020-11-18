@@ -14,21 +14,16 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-	@Bean
-    public Docket api() { 
-        return new Docket(DocumentationType.SWAGGER_2)  
-          .select()                                  
-          .apis(RequestHandlerSelectors.any())              
-          .paths(PathSelectors.any())                          
-          .build()
-          .apiInfo(apiInfo());
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any()).build().apiInfo(apiInfo());
     }
 
     private ApiInfo apiInfo() {
-       return new ApiInfoBuilder().title("Spring Boot Example")
-                                .description("This is an example for AlphaQuest - Sprint 3, made by Konstantinos Loizas, Blue team")
-                                .version("1.0.0")
-                                .build();
+        return new ApiInfoBuilder().title("Spring Boot Example")
+                .description("This is an example for AlphaQuest - Sprint 3, made by Konstantinos Loizas, Blue team")
+                .version("1.0.0").build();
     }
 
 }

@@ -18,7 +18,6 @@ public class TimeEntry {
     private String project_name;
     private String task_description;
 
-  
     public static LocalDate stringToDate(String StringDate) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
@@ -27,7 +26,7 @@ public class TimeEntry {
         return date;
     }
 
-    public static Duration intToDuration(int intDuration){
+    public static Duration intToDuration(int intDuration) {
         Duration duration = Duration.ofDays(intDuration);
         return duration;
     }
