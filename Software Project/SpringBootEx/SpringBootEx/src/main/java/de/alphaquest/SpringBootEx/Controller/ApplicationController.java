@@ -14,9 +14,8 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.alphaquest.SpringBootEx.TimeEntry;
+import de.alphaquest.SpringBootEx.Domain.TimeEntry;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 
 @Api(value = "Swagger Controller", description = "Demo API made for alphaQuest")
 @RestController
@@ -29,6 +28,7 @@ public class ApplicationController {
 	@RequestMapping("/")
 	public String home() {
 		return "Hello world! This is a Spring Boot application made for alphaQuest project";
+		
 	}
 
 	@GetMapping("/addEntry/{user_name}/{stringDate}/{intDuration}/{project_name}/{task_description}")
@@ -58,7 +58,7 @@ public class ApplicationController {
 
 		logger.debug("trying to delete Project {}", projectToDelete);
 		logger.info("list prior to deletion: {}", listAll());
-		entries.removeIf(e -> e.getProjectName().equals(projectToDelete));
+		entries.removeIf(e -> e.getProject_name().equals(projectToDelete));
 		logger.debug("list after deletion: {}", listAll());
 		return "Entry with Project Name: " + projectToDelete + ": removed";
 
@@ -67,14 +67,14 @@ public class ApplicationController {
 	@GetMapping("/listUsers")
 	public String listUsers() {
 
-		List<String> users = entries.stream().map(u -> u.getUserName()).collect(Collectors.toList());
+		List<String> users = entries.stream().map(u -> u.getUser_name()).collect(Collectors.toList());
 		return users.toString();
 	}
 
 	@GetMapping("/listUserEntries/{user_name}")
 	public String listUserEntries(@PathVariable String user_name) {
 
-		List<TimeEntry> user_entries = entries.stream().filter(u -> user_name.equals(u.getUserName())).collect(Collectors.toList());
+		List<TimeEntry> user_entries = entries.stream().filter(u -> user_name.equals(u.getUser_name())).collect(Collectors.toList());
 		return user_entries.toString();
 	}
 

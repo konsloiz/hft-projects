@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"f0671770f5fd4d53aa3a92929e252d51","collectionName":"shiftCovers"}
