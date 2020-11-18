@@ -44,7 +44,7 @@ public class ApplicationController {
 				user_name, date, duration, project_name, task_description);
 		TimeEntry entry = new TimeEntry(user_name, date, duration, project_name, task_description);
 		entries.add(entry);
-		return "addEntry method invoked";
+		return entry.toString() + " added successfully";
 
 	}
 
