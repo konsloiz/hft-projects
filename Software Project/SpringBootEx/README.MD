@@ -46,3 +46,10 @@ Also, please document your findings as a team in the Wiki as a tutorial.
 ----
 #### Tests
 All tests are passing
+
+----
+
+#### Docker Image (extra): 
+https://hub.docker.com/repository/docker/konsloiz/spring_boot_ex
+
+Built a docker image and pushed to Docker Hub for training purposes
