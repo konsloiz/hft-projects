@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 
 import de.alphaquest.SpringBootEx.Domain.TimeEntry;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @Api(value = "Swagger Controller", description = "Demo API made for alphaQuest")
 @RestController
@@ -30,6 +31,7 @@ public class ApplicationController {
 
 	}
 
+	@ApiOperation(value = "Add a new time entry", notes = "Remember: user_name = String, date = String (YYYYMMDD), duration = int (Days), project_name = String, task_description = String")
 	@GetMapping("/addEntry/{user_name}/{stringDate}/{intDuration}/{project_name}/{task_description}")
 	public TimeEntry addEntry(@PathVariable String user_name, @PathVariable String stringDate,
 			@PathVariable Integer intDuration, @PathVariable String project_name,
@@ -47,11 +49,13 @@ public class ApplicationController {
 
 	}
 
+	@ApiOperation(value = "Lists all time entries")
 	@GetMapping("/listAll")
 	public ArrayList<TimeEntry> listAll() {
 		return entries;
 	}
 
+	@ApiOperation(value = "Delete an entry based on the Project Name", notes = "Remember: Use a project name to delete a time entry")
 	@GetMapping("/deleteEntry/{projectToDelete}")
 	public ArrayList<TimeEntry> deleteEntry(@PathVariable String projectToDelete) {
 
@@ -63,6 +67,7 @@ public class ApplicationController {
 
 	}
 
+	@ApiOperation(value = "Lists all users")
 	@GetMapping("/listUsers")
 	public List<String> listUsers() {
 
@@ -70,6 +75,7 @@ public class ApplicationController {
 		return users;
 	}
 
+	@ApiOperation(value = "Get all time entries of a user", notes = "Remember: Use a user name to get his/hers time entries")
 	@GetMapping("/listUserEntries/{user_name}")
 	public List<TimeEntry> listUserEntries(@PathVariable String user_name) {
 
