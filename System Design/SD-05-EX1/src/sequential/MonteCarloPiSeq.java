@@ -3,7 +3,9 @@ package sequential;
 import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Main {
+public class MonteCarloPiSeq {
+	
+	
 
 	public static void main(String[] args) {
 
@@ -12,8 +14,8 @@ public class Main {
 		long start = System.currentTimeMillis();
 
 		for (int i = 0; i < n; i++) {
-			double x = ThreadLocalRandom.current().nextDouble();
-			double y = ThreadLocalRandom.current().nextDouble();
+			double x = random();
+			double y = random();
 			if (x * x + y * y <= 1)
 				hits++;
 		}
@@ -24,6 +26,10 @@ public class Main {
 		System.out.println(n + " times " + "\nPi = " + pi + " error: " + String.format (Locale.US, "%f",(pi - Math.PI)));
 		
 		
+	}
+
+	private static double random() {
+		return ThreadLocalRandom.current().nextDouble();
 	}
 
 }
