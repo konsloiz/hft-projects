@@ -8,69 +8,90 @@ import definitions.Socket;
 /**
  * @author Konstantinos Loizas
  * @version 1.0
- * @created 20-??t-2020 1:00:43 µµ
+ * @created 20-?e?-2020 11:35:12 pµ
  */
-@SuppressWarnings("unused")
 public class RCATelevision implements TV {
 
-	private boolean on = false;
-	private String program = "";
-	private int volume = 0;
-	public Socket socket = null;
+	private boolean on;
+	private String program;
+	private int volume;
+	public Socket tvSocket;
 
-	public void connect(Socket socket) throws WrongVoltage{
-		if (!(socket.getVoltage()==120)) {
-			throw new WrongVoltage(); }
-		this.socket = socket;
-		
+	private static int range = 120;
+
+	public RCATelevision() {
+
+	}
+
+	public void finalize() throws Throwable {
+
+	}
+
+	/**
+	 * 
+	 * @param a
+	 * @return
+	 * @exception WrongVoltage
+	 */
+	public void connect(Socket a) throws WrongVoltage {
+
+		if ((a.getVoltage() != range)) {
+			throw new WrongVoltage();
 		}
 
-	private boolean conntected() {
-		return socket!=null;
+		else {
+			this.tvSocket = a;
+		}
+
 	}
 
-	public void setProgram(String a){
-		this.program = a;
+	public String getProgram() {
+		return "";
 	}
 
-	public String getProgram(){
-		return program;
+	public int getVolume() {
+		return 0;
 	}
 
-	public int getVolume(){
-		if (on)
-		{return volume;}
-		else 
-			return 0;
+	public boolean isOff() {
+		if (!isOn()) {
+			return true;
+		}
+
+		else
+			return false;
 	}
 
-	public boolean isOff(){
-		return !on;
+	public boolean isOn() {
+		return false;
 	}
 
-	public boolean isOn(){
-		return on;
+	public void onOff() {
+
 	}
 
-	public void onOff(){
-		if (conntected())
-			on = !on;
-	}
-	
-	public void turnDown() {
-	
-	if (on & volume >= 0) {
-		volume --;}
-	
+	/**
+	 * 
+	 * @param a
+	 */
+	public void setProgram(String a) {
+
 	}
 
-	public void turnUp () {
-		if  ( on && volume < 100) {volume ++;}
-	}
-
-	@Override
 	public String toString() {
-		return "RCATelevision [on=" + on + ", program=" + program + ", volume=" + volume + ", socket=" + socket + "]";
+		return "";
+	}
+
+	/**
+	 * 
+	 * @exception TooLoud
+	 */
+	public void turnDown() throws TooLoud {
+
+	}
+
+	public void turnUp() {
+
 	}
 
 }

@@ -4,7 +4,7 @@ package definitions;
 /**
  * @author Konstantinos Loizas
  * @version 1.0
- * @created 20-??t-2020 1:00:42 µµ
+ * @created 20-?e?-2020 11:35:12 pµ
  */
 public interface ChangeFrequency {
 
