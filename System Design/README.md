@@ -1,5 +1,5 @@
 # System Design
-This repository will include all software projects deployed for the course System Design, M.Sc. program Software Technology by HFT Stuttgart. 
+This repository includes all software projects deployed for the course System Design, M.Sc. program Software Technology by HFT Stuttgart. 
 
 | Course                             | Master Software Technology                                                                                                                                                                                                                                                                                                           |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
