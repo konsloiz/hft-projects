@@ -1,5 +1,0 @@
-This is a text file
-which is spread
-over several
-lines - 
-but ends now.
