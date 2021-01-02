@@ -1,9 +1,6 @@
 # System Design
 This repository will include all software projects deployed for the course System Design, M.Sc. program Software Technology by HFT Stuttgart. 
 
-# System Design
-This repository will include all software projects deployed for the course System Design, M.Sc. program Software Technology by HFT Stuttgart. 
-
 | Course                             | Master Software Technology                                                                                                                                                                                                                                                                                                           |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Name of Module                     | System Design                                                                                                                                                                                                                                                                                                                        |
@@ -17,7 +14,7 @@ This repository will include all software projects deployed for the course Syste
                                                                                                                                                                                                                                                                                                                                                               |
 | Student Work Load                  | 180h Total: Lectures (68h) + Self Studies (112h)                                                                                                                                                                                                                                                                                                             |
                                                                                                                                                                                                                                                                                                       |
-| Necessary Previous Knowledge       | Software Engineering, Object Oriented Software Implementation                                                                                                                                                                                                                                                                        |
+| Necessary Previous Knowledge       | Software Engineering, Object Oriented Software Implementation                                                                                                                                                                                                                                                                       
 
 ### Final Knowledge and Skills:  
 
