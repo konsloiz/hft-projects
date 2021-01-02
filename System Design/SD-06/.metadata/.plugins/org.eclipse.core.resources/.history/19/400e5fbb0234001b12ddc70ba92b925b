@@ -1,0 +1,5 @@
+package de.stuttgart.hft.stock.flow;
+
+public class StockPublisher {
+
+}

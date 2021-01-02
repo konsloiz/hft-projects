@@ -1,0 +1,6 @@
+package comparator;
+
+public interface Comparator {
+
+	public int compare (int x, int y);
+}

@@ -1,0 +1,19 @@
+package function_declaration;
+
+import java.util.function.IntUnaryOperator;
+
+public class Main {
+	
+	IntUnaryOperator factorial = n -> {
+		int n_factorial = n*n-1;
+		return n_factorial;
+	};
+	
+	int n = 2;
+	int n_factorial = factorial.applyAsInt(n);
+	
+	
+	System.out.println(n);
+	
+
+}

@@ -1,0 +1,25 @@
+package streamsCreation.version2;
+
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		//IntStream sqr = IntStream.range(1, 11);
+		//sqr.map(s ->s*s).boxed().peek(l -> System.out.println(l)).reduce(0, (s,l) -> s + l);
+		
+	
+		Stream.genarate(ThreadLocalRandom.current().nextDouble())
+			.limit(10)
+			.map(n -> n*n)
+			.boxed()
+			.collect(Collectors.toList())
+			.forEach(System.out::println);
+		
+	}
+
+}
+

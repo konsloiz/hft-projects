@@ -1,0 +1,34 @@
+package de.stuttgart.hft.stock.flow;
+
+import java.util.concurrent.Flow.Processor;
+import java.util.concurrent.Flow.Subscription;
+import java.util.concurrent.SubmissionPublisher;
+import java.util.function.Function;
+
+public class TransformerProcessor<T, R> extends SubmissionPublisher<R> implements Processor<T, R> {
+	private Function<? super T, ? extends R> transform;
+	private Subscription subscription;
+
+	public TransformerProcessor(Function<? super T, ? extends R> transform) {
+		super();
+		this.transform = transform;
+	}
+
+	public void onSubscribe(Subscription subscription) {
+		this.subscription = subscription;
+		subscription.request(1);
+	}
+
+	public void onNext(T item) {
+		submit((R) transform.apply(item));
+		subscription.request(1);
+	}
+
+	public void onError(Throwable t) {
+		System.out.println("Transformer: error " + t.toString());
+	}
+
+	public void onComplete() {
+		close();
+	}
+}

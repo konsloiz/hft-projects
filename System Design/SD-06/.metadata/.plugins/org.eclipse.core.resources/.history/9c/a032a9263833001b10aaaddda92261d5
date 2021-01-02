@@ -1,0 +1,24 @@
+package function_declaration;
+
+import java.util.function.IntUnaryOperator;
+
+public class Main {
+	 
+	public static void main(String[] args) {
+	
+	IntUnaryOperator factorial = n -> {
+		int n_factorial = 1;
+		for(int i=1; i<=n; i++) {
+			n_factorial = n_factorial * i;
+		}
+		return n_factorial;
+	};
+	
+	int n = 5;
+	int n_factorial = factorial.applyAsInt(n);
+	
+	System.out.println("The factorial of number " + n + " = " + n_factorial);
+
+	}
+}
+
