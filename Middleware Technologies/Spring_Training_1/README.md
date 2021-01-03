@@ -1,4 +1,4 @@
-== Module: Spring Boot Introduction
+## Module: Spring Boot Introduction
 
 * Background: Spring Framework - History & components
 * Spring <- -> Spring Boot
@@ -8,10 +8,10 @@
 * Basic logging and testing
 * Using Actuator
 
-=== Objectives
+### Objectives
 _The student is able to build and configure an own Spring Boot application from scratch with the IDE of choice. The exercise is to build an own "Hello, World!" application that exposes various REST endpoints and is able to execute CRUD operations on the state of the application. Optional: Add logging and testing, configure Actuator._
 
-=== Exercises
+### Exercises
 
 * Build a simple Spring Boot Microservice with the following starter dependencies: Web, Actuator
 * Run the microservice and test the endpoint /actuator/health and /actuator/info
@@ -19,7 +19,7 @@ _The student is able to build and configure an own Spring Boot application from 
 * Add some basic "functionality" to make the service react to HTTP GET, POST, PUT and DELETE calls (e.g. modify an internal list)
 * Change the configuration to make the server run on port 8081 instead of 8080
 
-=== Links
+### Links
 
 * https://start.spring.io/
 * https://spring.io/guides/
