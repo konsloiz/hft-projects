@@ -1,4 +1,4 @@
-# Middleware Technologiy
+# Middleware Technology
 This repository includes all software projects deployed for the course Middleware Technology, M.Sc. program Software Technology by HFT Stuttgart.
 
 | Course                             | Master Software Technology                                                                                                                                                                                                                                                                                                           |
