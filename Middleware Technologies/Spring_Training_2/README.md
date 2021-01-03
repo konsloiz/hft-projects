@@ -13,6 +13,7 @@ _The student understands the concepts and use cases of container technology and 
 
 ### Links
 
+* https://hub.docker.com/repository/docker/konsloiz/spring-training
 * https://hub.docker.com/
 * https://labs.play-with-docker.com/
 * https://github.com/wagoodman/dive
