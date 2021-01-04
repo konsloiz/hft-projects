@@ -1,16 +1,17 @@
-## Module: Persistence
+## Module: Configuration & Profiles
 
-* Spring Data
-* Concept of entities and repositories
-* JPA and JDBC basics
-* H2, PostgeSQL, MySQL - configuration via Spring Boot
-* Running databases as Docker images
+* Various possibilities of external configuration in Spring (Boot)
+* Order of configuration options
+* Spring profiles
+* Consuming configuration properties with @Value and specifying defaults
+* Spring Cloud Config Server and Client as reference example for external configuration
 
 ### Objectives and exercises
-_The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. The database can either be in-memory (H2) or a (containerized) PostgreSQL. Optional: Provide a docker-compose file to stand up a multi-container environment with application and database._
+_The student is able to build a Spring Boot application with various configuration profiles and knows how to set the desired one. It is also required to understand how Spring Boot will prioritize between them, e.g. ("Who wins if multiple are specified?") and what the advantages and drawbacks of them are. The exercise is to extend the existing persistence application and provide different persistence backend for different purposes, e.g. set an in-memory database for development and test purposes and a containerized one for production._
 
-### Links
+### Links:
 
-* https://spring.io/projects/spring-data
-* https://spring.io/guides/gs/accessing-data-jpa/
-* https://www.baeldung.com/spring-data-derived-queries
+* https://docs.spring.io/spring-boot/docs/1.0.1.RELEASE/reference/html/boot-features-external-config.html
+* https://docs.spring.io/spring-boot/docs/1.2.3.RELEASE/reference/html/boot-features-external-config.html
+* https://www.baeldung.com/spring-value-annotation
+* https://spring.io/guides/gs/centralized-configuration/
