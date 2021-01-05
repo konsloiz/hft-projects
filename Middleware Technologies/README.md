@@ -15,7 +15,7 @@ This repository includes all software projects deployed for the course Middlewar
 | Necessary Previous Knowledge       | Operating Systems, Object Oriented Software Implementation,  Networks                                                                                                                                                                                                                                                                         |                                                                                 
 
 
->Disclaimer:
+>Disclaimer: The following text was ogiginally produced by [Matthias Haeussler](https://github.com/maeddes)
 
 # Overview
 
