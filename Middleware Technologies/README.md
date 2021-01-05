@@ -14,3 +14,144 @@ This repository includes all software projects deployed for the course Middlewar
 | Student Work Load                  | 180h Total: Lectures (68h) + Self Studies (112h)                                                                                                                                                                                                                                                                                     |
 | Necessary Previous Knowledge       | Operating Systems, Object Oriented Software Implementation,  Networks                                                                                                                                                                                                                                                                         |                                                                                 
 
+# Overview
+
+:toc:
+
+[cloud-intro]
+
+## Module: Cloud Introduction (theory-block I)
+
+* What is Cloud Computing? Encounters in everyday life and history
+* Characteristic, advantages & challenges
+* Terminology - public, private, hybrid, dedicated
+* Abstraction layers - IaaS, PaaS, FaaS, SaaS
+* Overview - Hypervisors, virtual machines, containers and orchestration
+* Overview - Global cloud service providers (CSPs), technologies and corresponding offerings
+
+### Objectives and exercises
+_The student is able to describe cloud computing in own words and list examples for offerings, topologies and technologies. Includes ability to differentiate between different abstraction layers and knowledge how those layers and according technologies interact with each other. No exercises in this module_
+
+### Links
+
+ * https://landscape.cncf.io/
+ * https://www.cncf.io/wp-content/uploads/2020/11/CNCF_Survey_Report_2020.pdf
+
+## Module: Spring Boot Introduction
+
+* Background: Spring Framework - History & components
+* Spring <- -> Spring Boot
+* Spring Initializr (start.spring.io) & starter dependencies
+* Basic project structure (folders, configuration ..)
+* "Hello, World!" example explained
+* Basic logging and testing
+* Using Actuator
+
+### Objectives
+_The student is able to build and configure an own Spring Boot application from scratch with the IDE of choice. The exercise is to build an own "Hello, World!" application that exposes various REST endpoints and is able to execute CRUD operations on the state of the application. Optional: Add logging and testing, configure Actuator._
+
+### Exercises
+
+* Build a simple Spring Boot Microservice with the following starter dependencies: Web, Actuator
+* Run the microservice and test the endpoint /actuator/health and /actuator/info
+* Annotate the Microservice with @RestController and implement a "Hello, World!" method, which responds to an HTTP GET request.
+* Add some basic "functionality" to make the service react to HTTP GET, POST, PUT and DELETE calls (e.g. modify an internal list)
+* Change the configuration to make the server run on port 8081 instead of 8080
+
+### Links
+
+* https://start.spring.io/
+* https://spring.io/guides/
+* https://www.baeldung.com/spring-boot/
+
+## Module: Containers
+
+* What are containers and how do they work
+* Containers vs. VMs 
+* History of containers and rise of Docker
+* Docker concepts: daemon, hub, dockerfile, CLI
+* Multi-container handling with docker-compose
+* Limitations and problems with containers
+* Multiple container build options (Dockerfile, Buildpacks/Paketo/Jib)
+
+### Objectives and exercises
+_The student understands the concepts and use cases of container technology and is able to describe them. The first exercise is to pull sample images from an image registry (e.g. Docker Hub) and interact with them (run, expose port, execute shell, cleanup etc). After that the student can show how to build a custom image via Dockerfile and push it to a registry for others to access. Take the sample application from module "Spring Boot Intro", put it into a container image and run it using a container build mechanism of your choice._
+
+### Links
+
+* https://hub.docker.com/
+* https://labs.play-with-docker.com/
+* https://github.com/wagoodman/dive
+* https://paketo.io/
+* https://github.com/GoogleContainerTools/jib
+
+## Module: Persistence
+
+* Spring Data
+* Concept of entities and repositories
+* JPA and JDBC basics
+* H2, PostgeSQL, MySQL - configuration via Spring Boot
+* Running databases as Docker images
+
+### Objectives and exercises
+_The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. The database can either be in-memory (H2) or a (containerized) PostgreSQL. Optional: Provide a docker-compose file to stand up a multi-container environment with application and database._
+
+### Links
+
+* https://spring.io/projects/spring-data
+* https://spring.io/guides/gs/accessing-data-jpa/
+* https://www.baeldung.com/spring-data-derived-queries
+
+## Module: Configuration & Profiles
+
+* Various possibilities of external configuration in Spring (Boot)
+* Order of configuration options
+* Spring profiles
+* Consuming configuration properties with @Value and specifying defaults
+* Spring Cloud Config Server and Client as reference example for external configuration
+
+### Objectives and exercises
+_The student is able to build a Spring Boot application with various configuration profiles and knows how to set the desired one. It is also required to understand how Spring Boot will prioritize between them, e.g. ("Who wins if multiple are specified?") and what the advantages and drawbacks of them are. The exercise is to extend the existing persistence application and provide different persistence backend for different purposes, e.g. set an in-memory database for development and test purposes and a containerized one for production._
+
+### Links:
+
+* https://docs.spring.io/spring-boot/docs/1.0.1.RELEASE/reference/html/boot-features-external-config.html
+* https://docs.spring.io/spring-boot/docs/1.2.3.RELEASE/reference/html/boot-features-external-config.html
+* https://www.baeldung.com/spring-value-annotation
+* https://spring.io/guides/gs/centralized-configuration/
+
+## Module: Synchronous Communication, API & REST
+
+* Synchronous communication
+* REST 
+  * HTTP, Basics, Maturity Model
+* Synchronous communication with RestTemplate (and Feign)
+
+### Objectives and exercises
+_The student understands the concepts of an API and synchronous communication in distributed systems and can explain it in own words. The exercise is to implement a CRUD application client to work with a REST API using either RestTemplate (or Feign)._
+
+### Links
+
+* https://spring.io/guides/gs/consuming-rest/
+* https://www.baeldung.com/rest-template
+* https://spring.io/guides/gs/rest-hateoas/
+* https://www.baeldung.com/spring-cloud-openfeign
+
+## Module: Cloud-native software development & Microservices (theory-block II)
+
+* CAP Theorem
+* Conway's Law
+* Fallacies of distributed computing
+* Domain-Driven Design basics
+* 12-factor application
+* Evolution of applications and deployments: Monolithic -> Service-Oriented Architecture -> Microservices
+* Introduction to serverless and FaaS terminology
+
+### Objectives and exercises
+_The student knows about the evolution of distributed systems and the drivers towards state-of-the-art implementation and deployment. She/he can explain the underlying concepts and theories and put it into practical context. No dedicated exercises for this module. Recap of basics: Spring Boot, Docker, configuration, persistence and messaging._
+
+### Links
+
+* https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
+
+
