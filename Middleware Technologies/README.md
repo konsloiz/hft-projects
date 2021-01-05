@@ -16,9 +16,6 @@ This repository includes all software projects deployed for the course Middlewar
 
 # Overview
 
-:toc:
-
-[cloud-intro]
 
 ## Module: Cloud Introduction (theory-block I)
 
