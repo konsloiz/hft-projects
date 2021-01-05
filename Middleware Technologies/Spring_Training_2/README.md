@@ -1,3 +1,5 @@
+>Disclaimer: The following text was originally produced by [Matthias Haeussler](https://github.com/maeddes)
+
 ## Module: Containers
 
 * What are containers and how do they work
