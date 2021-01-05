@@ -14,6 +14,7 @@ This repository includes all software projects deployed for the course Middlewar
 | Student Work Load                  | 180h Total: Lectures (68h) + Self Studies (112h)                                                                                                                                                                                                                                                                                     |
 | Necessary Previous Knowledge       | Operating Systems, Object Oriented Software Implementation,  Networks                                                                                                                                                                                                                                                                         |                                                                                 
 
+---
 
 >Disclaimer: The following text was ogiginally produced by [Matthias Haeussler](https://github.com/maeddes)
 
