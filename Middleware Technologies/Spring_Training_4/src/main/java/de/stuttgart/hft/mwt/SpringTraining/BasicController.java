@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,7 +36,7 @@ public class BasicController {
 		return basicList.toString();
 	}
 
-	@PutMapping("/strings/{newString}")
+	@PostMapping("/strings/{newString}")
 	@ResponseBody
 	public String addNewString(@PathVariable String newString) {
 		basicList.add(newString);
