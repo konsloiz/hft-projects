@@ -1,6 +1,0 @@
-package comparator;
-
-public interface Comparator {
-
-	return x-y;
-}
