@@ -1,3 +1,6 @@
+>Disclaimer: The following text was originally produced by [Matthias Haeussler](https://github.com/maeddes)
+
+
 ## Module: Configuration & Profiles
 
 * Various possibilities of external configuration in Spring (Boot)
